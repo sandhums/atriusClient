@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignupView: View {
     @EnvironmentObject private var model: AtriusModel
+    @EnvironmentObject private var appState: AppState
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""

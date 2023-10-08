@@ -67,13 +67,14 @@ struct HTTPClient {
     private var defaultHeaders: [String: String] {
             
             var headers = ["Content-Type": "application/json"]
-            
-            let defaults = UserDefaults.standard
-            guard let token = defaults.string(forKey: "authToken") else {
-                return headers
-            }
-            
-            headers["Authorization"] = "Bearer \(token)"
+        //TODO: BEARER
+//            let model = AtriusModel()
+//            
+//        guard let token = model.getStoredToken() else {
+//                return headers
+//            }
+//            
+//            headers["Authorization"] = "Bearer \(token)"
             return headers
         }
     

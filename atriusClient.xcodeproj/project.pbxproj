@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */; };
+		06DEEFE32AD2D4240039E5A4 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */; };
+		06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE42AD2D4440039E5A4 /* AppState.swift */; };
 		06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E116EE2AD17DDD00077B50 /* atriusClientApp.swift */; };
 		06E116F12AD17DDD00077B50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E116F02AD17DDD00077B50 /* ContentView.swift */; };
 		06E116F32AD17DDE00077B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E116F22AD17DDE00077B50 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		06DEEFE42AD2D4440039E5A4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		06E116EB2AD17DDD00077B50 /* atriusClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atriusClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E116EE2AD17DDD00077B50 /* atriusClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atriusClientApp.swift; sourceTree = "<group>"; };
 		06E116F02AD17DDD00077B50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06DEEFDF2AD2D3CE0039E5A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		06E116E22AD17DDD00077B50 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +125,7 @@
 		06E116ED2AD17DDD00077B50 /* atriusClient */ = {
 			isa = PBXGroup;
 			children = (
+				06DEEFDF2AD2D3CE0039E5A4 /* Views */,
 				06E117252AD18AC700077B50 /* Screens */,
 				06E117222AD18A1300077B50 /* DTOs */,
 				06E1171F2AD1891D00077B50 /* Models */,
@@ -161,6 +176,7 @@
 		06E1171C2AD187A100077B50 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */,
 				06E1171D2AD1880100077B50 /* APIEndpoints.swift */,
 			);
 			path = Utilities;
@@ -169,6 +185,7 @@
 		06E1171F2AD1891D00077B50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				06DEEFE42AD2D4440039E5A4 /* AppState.swift */,
 				06E117202AD1893D00077B50 /* AtriusModel.swift */,
 				06E117282AD18F5F00077B50 /* User.swift */,
 				06E117302AD2951500077B50 /* KeychainServices.swift */,
@@ -323,14 +340,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DEEFE32AD2D4240039E5A4 /* ErrorWrapper.swift in Sources */,
 				06E117272AD18AE500077B50 /* SignupView.swift in Sources */,
 				06E116F12AD17DDD00077B50 /* ContentView.swift in Sources */,
 				06E117242AD18A2F00077B50 /* SignupDTO.swift in Sources */,
 				06E1172B2AD1994B00077B50 /* LoginView.swift in Sources */,
 				06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */,
 				06E117292AD18F5F00077B50 /* User.swift in Sources */,
+				06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */,
 				06E1171B2AD1875700077B50 /* HTTPClient.swift in Sources */,
 				06E117312AD2951500077B50 /* KeychainServices.swift in Sources */,
+				06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */,
 				06E1171E2AD1880100077B50 /* APIEndpoints.swift in Sources */,
 				06E117212AD1893D00077B50 /* AtriusModel.swift in Sources */,
 			);

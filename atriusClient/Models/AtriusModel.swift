@@ -11,20 +11,25 @@ class AtriusModel: ObservableObject {
     @Published private(set) var isLoggedIn = false
     
     let httpClient = HTTPClient()
+    
     init() {
-        if keychainToken != nil {
+//        if keychainToken != nil {
+//            self.isLoggedIn = true
+//        }
+        let token = getStoredToken()
+        if token != nil {
             self.isLoggedIn = true
         }
     }
-    var keychainToken: String? {
-        get { getStoredToken()
-        }
-        set {
-            if let newToken = newValue {
-                updateStoredToken(newToken)
-            }
-        }
-    }
+//    var keychainToken: String? {
+//        get { getStoredToken()
+//        }
+//        set {
+//            if let newToken = newValue {
+//                updateStoredToken(newToken)
+//            }
+//        }
+//    }
     
     func signup(name: String, email: String, password: String, passwordConfirm: String) async throws -> SignupDTO {
         
@@ -53,7 +58,9 @@ class AtriusModel: ObservableObject {
     }
     
     func logout() {
-        keychainToken = nil
+//        keychainToken = nil
+        deleteStoredToken()
+        self.isLoggedIn = false
     }
     
     
@@ -83,4 +90,14 @@ class AtriusModel: ObservableObject {
             print("error getting token")
             return ""
     }
+    
+    func deleteStoredToken() {
+        let kcw = KeychainWrapperForToken()
+        if let token = try? kcw.deleteGenericTokenFor(
+            account: "Atrius",
+            service: "jwtToken"){
+            
+        }
+    }
+    
 }
