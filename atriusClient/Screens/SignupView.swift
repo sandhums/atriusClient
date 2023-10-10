@@ -18,11 +18,17 @@ struct SignupView: View {
     
     private func signup() async {
         do {
-            let signupDTO = try await model.signup(name: name, email: email, password: password, passwordConfirm: passwordConfirm)
-            
+            let loginResponse = try await model.signup(name: name, email: email, password: password, passwordConfirm: passwordConfirm)
+            if loginResponse.status == "success"{
+                appState.routes.append(.home)
+            } else {
+                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
+            }
+
         } catch {
-            errorMessage = error.localizedDescription
+            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "email is already taken")
         }
+
     }
     var body: some View {
         Form {
@@ -31,6 +37,7 @@ struct SignupView: View {
                 .textInputAutocapitalization(.never)
             SecureField("Password", text: $password)
             SecureField("Confirm Password", text: $passwordConfirm)
+
             Button("Signup"){
                 Task {
                     await signup()

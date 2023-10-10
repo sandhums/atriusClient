@@ -10,6 +10,7 @@
 		06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */; };
 		06DEEFE32AD2D4240039E5A4 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */; };
 		06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE42AD2D4440039E5A4 /* AppState.swift */; };
+		06DEEFE72AD3C7130039E5A4 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE62AD3C7130039E5A4 /* String+extensions.swift */; };
 		06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E116EE2AD17DDD00077B50 /* atriusClientApp.swift */; };
 		06E116F12AD17DDD00077B50 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E116F02AD17DDD00077B50 /* ContentView.swift */; };
 		06E116F32AD17DDE00077B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06E116F22AD17DDE00077B50 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		06DEEFE42AD2D4440039E5A4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		06DEEFE62AD3C7130039E5A4 /* String+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+extensions.swift"; sourceTree = "<group>"; };
 		06E116EB2AD17DDD00077B50 /* atriusClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atriusClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06E116EE2AD17DDD00077B50 /* atriusClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = atriusClientApp.swift; sourceTree = "<group>"; };
 		06E116F02AD17DDD00077B50 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		06E1171C2AD187A100077B50 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				06DEEFE62AD3C7130039E5A4 /* String+extensions.swift */,
 				06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */,
 				06E1171D2AD1880100077B50 /* APIEndpoints.swift */,
 			);
@@ -348,6 +351,7 @@
 				06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */,
 				06E117292AD18F5F00077B50 /* User.swift in Sources */,
 				06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */,
+				06DEEFE72AD3C7130039E5A4 /* String+extensions.swift in Sources */,
 				06E1171B2AD1875700077B50 /* HTTPClient.swift in Sources */,
 				06E117312AD2951500077B50 /* KeychainServices.swift in Sources */,
 				06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */,

@@ -7,19 +7,23 @@
 
 import Foundation
 
-class User: Codable {
-//    var _id: String
+struct User: Codable {
+    var id: String? {
+        return _id
+    }
+    var _id: String
     var name: String
     var email: String
     var password: String
-    var role: String
-    var active: Bool
+    var photo: String?
+    var role: String?
+    var active: Bool?
+    var passwordChangedAt: Date?
+    var passwordResetToken: String?
+    var passwordResetExpires: Date?
     
-    init(name: String, email: String, password: String, role: String, active: Bool) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.role = role
-        self.active = active
-    }
+}
+struct ApiResponse: Codable {
+    var user: User
+    var token: String
 }

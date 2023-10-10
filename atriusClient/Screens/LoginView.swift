@@ -17,21 +17,18 @@ struct LoginView: View {
     
     private func login() async {
         do {
-            let signupDTO =  try await model.login(email: email, password: password)
-            appState.routes.append(.home)
-//            if signupDTO.status == "success" {
-//           
-//                
-//            //            if loginResponseDTO.error {
-//            //                //errorMessage = loginResponseDTO.reason ?? ""
-//                          
-//                        } else {
-//                            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "incorrect email or password")
-//                        }
+            let loginResponse =  try await model.login(email: email, password: password)
+       
+            if loginResponse.status == "success"{
+                appState.routes.append(.home)
+            } else {
+                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
+            }
+
         } catch {
-            errorMessage = error.localizedDescription
-            //            appState.errorWrapper = ErrorWrapper(error: error, guidance: error.localizedDescription)
+            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
         }
+
     }
     var body: some View {
         Form {
@@ -50,14 +47,21 @@ struct LoginView: View {
                     appState.routes.append(.signup)
                 }.buttonStyle(.borderless)
             }
+            Text(errorMessage)
         }
         .navigationTitle("Login")
         .navigationBarBackButtonHidden(true)
+        .sheet(item: $appState.errorWrapper) { errorWrapper in
+            ErrorView(errorWrapper: errorWrapper)
+                .presentationDetents([.medium])
+        }
     }
 }
 
 #Preview {
     NavigationStack {
         LoginView()
+            .environmentObject(AtriusModel())
+            .environmentObject(AppState())
     }
 }
