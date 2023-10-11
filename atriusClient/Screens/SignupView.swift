@@ -18,15 +18,15 @@ struct SignupView: View {
     
     private func signup() async {
         do {
-            let loginResponse = try await model.signup(name: name, email: email, password: password, passwordConfirm: passwordConfirm)
-            if loginResponse.status == "success"{
+            let authResponse = try await model.signup(name: name, email: email, password: password, passwordConfirm: passwordConfirm)
+            if authResponse.status == "success"{
                 appState.routes.append(.home)
             } else {
-                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
+                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: authResponse.message ?? "")
             }
 
         } catch {
-            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "email is already taken")
+            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: error.localizedDescription)
         }
 
     }

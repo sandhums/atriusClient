@@ -17,16 +17,17 @@ struct LoginView: View {
     
     private func login() async {
         do {
-            let loginResponse =  try await model.login(email: email, password: password)
+            let authResponse =  try await model.login(email: email, password: password)
        
-            if loginResponse.status == "success"{
+            if authResponse.status == "success"{
                 appState.routes.append(.home)
             } else {
-                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
+                appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: authResponse.message ?? "")
             }
 
         } catch {
-            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: "Incorrect email or password")
+//            errorMessage = error.localizedDescription
+            appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: error.localizedDescription)
         }
 
     }
