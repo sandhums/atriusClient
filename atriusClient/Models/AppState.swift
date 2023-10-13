@@ -21,6 +21,7 @@ enum Route: Hashable {
     case patient
     case doctor
     case billing
+    case note
     
 }
 

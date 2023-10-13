@@ -14,6 +14,16 @@ struct PatientScreen: View {
     
     var body: some View {
         Text("Patient Screen")
+            .navigationTitle("Patient")
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Logout") {
+                        model.logout()
+                        appState.routes.append(.login)
+                    }
+                }
+            }
     }
 }
 

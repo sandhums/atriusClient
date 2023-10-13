@@ -12,6 +12,10 @@
 		06D4FE4D2AD6A712007FB815 /* BillingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE4C2AD6A712007FB815 /* BillingScreen.swift */; };
 		06D4FE4F2AD827D5007FB815 /* EntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE4E2AD827D5007FB815 /* EntryField.swift */; };
 		06D4FE512AD828A6007FB815 /* AuthEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */; };
+		06D4FE532AD8FE89007FB815 /* SpeechRecognizer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE522AD8FE89007FB815 /* SpeechRecognizer2.swift */; };
+		06D4FE552AD903AF007FB815 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE542AD903AF007FB815 /* NoteView.swift */; };
+		06D4FE572AD9086D007FB815 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE562AD9086D007FB815 /* Note.swift */; };
+		06D4FE5B2AD94292007FB815 /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE5A2AD94292007FB815 /* SpeechRecognizer.swift */; };
 		06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */; };
 		06DEEFE32AD2D4240039E5A4 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */; };
 		06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE42AD2D4440039E5A4 /* AppState.swift */; };
@@ -56,6 +60,10 @@
 		06D4FE4C2AD6A712007FB815 /* BillingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingScreen.swift; sourceTree = "<group>"; };
 		06D4FE4E2AD827D5007FB815 /* EntryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryField.swift; sourceTree = "<group>"; };
 		06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntryModel.swift; sourceTree = "<group>"; };
+		06D4FE522AD8FE89007FB815 /* SpeechRecognizer2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer2.swift; sourceTree = "<group>"; };
+		06D4FE542AD903AF007FB815 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		06D4FE562AD9086D007FB815 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		06D4FE5A2AD94292007FB815 /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		06DEEFE42AD2D4440039E5A4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -111,6 +119,7 @@
 			children = (
 				06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */,
 				06D4FE4E2AD827D5007FB815 /* EntryField.swift */,
+				06D4FE542AD903AF007FB815 /* NoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,11 +208,14 @@
 		06E1171F2AD1891D00077B50 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				06D4FE522AD8FE89007FB815 /* SpeechRecognizer2.swift */,
 				06DEEFE42AD2D4440039E5A4 /* AppState.swift */,
 				06E117202AD1893D00077B50 /* AtriusModel.swift */,
 				06E117282AD18F5F00077B50 /* User.swift */,
 				06E117302AD2951500077B50 /* KeychainServices.swift */,
 				06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */,
+				06D4FE562AD9086D007FB815 /* Note.swift */,
+				06D4FE5A2AD94292007FB815 /* SpeechRecognizer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -363,6 +375,9 @@
 				06E116F12AD17DDD00077B50 /* ContentView.swift in Sources */,
 				06E117242AD18A2F00077B50 /* SignupDTO.swift in Sources */,
 				06E1172B2AD1994B00077B50 /* LoginView.swift in Sources */,
+				06D4FE552AD903AF007FB815 /* NoteView.swift in Sources */,
+				06D4FE532AD8FE89007FB815 /* SpeechRecognizer2.swift in Sources */,
+				06D4FE572AD9086D007FB815 /* Note.swift in Sources */,
 				06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */,
 				06E117292AD18F5F00077B50 /* User.swift in Sources */,
 				06D4FE4F2AD827D5007FB815 /* EntryField.swift in Sources */,
@@ -371,6 +386,7 @@
 				06D4FE512AD828A6007FB815 /* AuthEntryModel.swift in Sources */,
 				06D4FE4D2AD6A712007FB815 /* BillingScreen.swift in Sources */,
 				06DEEFE72AD3C7130039E5A4 /* String+extensions.swift in Sources */,
+				06D4FE5B2AD94292007FB815 /* SpeechRecognizer.swift in Sources */,
 				06E1171B2AD1875700077B50 /* HTTPClient.swift in Sources */,
 				06E117312AD2951500077B50 /* KeychainServices.swift in Sources */,
 				06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */,
@@ -540,6 +556,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "“Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.”";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "“You can view a text transcription of your audio notes.”";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -578,6 +596,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "“Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.”";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "“You can view a text transcription of your audio notes.”";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

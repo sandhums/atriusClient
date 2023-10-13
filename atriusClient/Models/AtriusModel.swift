@@ -13,17 +13,20 @@ class AtriusModel: ObservableObject {
     @Published private(set) var userRole = "user"
     
     let httpClient = HTTPClient()
-    
+//    var note: [Note] = []
+    var note = Note()
     @Published var keychainToken: String? = ""
     
     init() {
         let defaults = UserDefaults.standard
         let userId = defaults.string(forKey: "userId")
+        userRole = defaults.string(forKey: "userRole") ?? "user"
         keychainToken = getStoredToken().self
         if keychainToken != nil &&  userId != nil {
             self.isLoggedIn = true
         }
         print(userId as Any)
+        print(userRole as Any)
     }
 
     func signup(name: String, email: String, password: String, passwordConfirm: String) async throws -> AuthResponse {

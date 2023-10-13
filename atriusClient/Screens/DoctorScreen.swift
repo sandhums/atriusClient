@@ -16,6 +16,14 @@ struct DoctorScreen: View {
         Text("Doctor Screen")
             .navigationTitle("Doctors")
             .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Logout") {
+                        model.logout()
+                        appState.routes.append(.login)
+                    }
+                }
+            }
     }
         
 }

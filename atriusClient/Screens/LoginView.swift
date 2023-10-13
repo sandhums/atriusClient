@@ -20,14 +20,14 @@ struct LoginView: View {
             let authResponse =  try await model.login(email: email, password: password)
        
             if authResponse.status == "success"{
-                appState.routes.append(.home)
-//                if (model.userRole == "doctor"){
-//                    appState.routes.append(.home)
-//                } else if (model.userRole == "patient") {
-//                    appState.routes.append(.patient)
-//                } else {
-//                    appState.routes.append(.billing)
-//                }
+//                appState.routes.append(.note)
+                if (authResponse.user?.role == "doctor"){
+                    appState.routes.append(.doctor)
+                } else if (authResponse.user?.role == "patient") {
+                    appState.routes.append(.patient)
+                } else {
+                    appState.routes.append(.billing)
+                }
             } else {
                 appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: authResponse.message ?? "")
             }
