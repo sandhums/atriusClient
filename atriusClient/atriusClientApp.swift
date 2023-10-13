@@ -18,10 +18,9 @@ struct atriusClientApp: App {
             NavigationStack(path: $appState.routes) {
                 Group {
                     if model.isLoggedIn {
-                        ContentView()
-                    } else {
-                        LoginView()
-                        
+                            ContentView()
+                        } else {
+                         LoginView()    
                     }
                 }
                 .navigationDestination(for: Route.self) { route in
@@ -32,12 +31,12 @@ struct atriusClientApp: App {
                         SignupView()
                     case .home:
                         ContentView()
-//                    case .profile:
-//                        UpdateProfileView()
-//                    case .address:
-//                        UpdateAddressView()
-//                    case .test:
-//                        Test()
+                    case .patient:
+                        PatientScreen()
+                    case .doctor:
+                        DoctorScreen()
+                    case .billing:
+                        BillingScreen()
                     }
                 }
             }

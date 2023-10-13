@@ -7,12 +7,14 @@
 
 import Foundation
 
+@MainActor
 class AtriusModel: ObservableObject {
     @Published private(set) var isLoggedIn = false
+    @Published private(set) var userRole = "user"
     
     let httpClient = HTTPClient()
     
-    var keychainToken: String?
+    @Published var keychainToken: String? = ""
     
     init() {
         let defaults = UserDefaults.standard
@@ -32,8 +34,13 @@ class AtriusModel: ObservableObject {
         print("let resource signup")
         let authResponse = try await httpClient.load(resource)
         print("resource loaded signup")
-        if let token = authResponse.token {
-            updateStoredToken(token)
+        if authResponse.token != nil && authResponse.user?._id != nil {
+//        if let token = authResponse.token {
+            let defaults = UserDefaults.standard
+            defaults.set(authResponse.user?._id, forKey: "userId")
+            defaults.set(authResponse.user?.role, forKey: "userRole")
+            userRole = authResponse.user?.role ?? "user"
+            updateStoredToken(authResponse.token!)
         }
         return authResponse
     }
@@ -51,8 +58,8 @@ class AtriusModel: ObservableObject {
 //        if let token = authResponse.token {
             let defaults = UserDefaults.standard
             defaults.set(authResponse.user?._id, forKey: "userId")
-            print("defaults set")
-            print(authResponse.user?._id as Any)
+            defaults.set(authResponse.user?.role, forKey: "userRole")
+            userRole = authResponse.user?.role ?? "user"
             updateStoredToken(authResponse.token!)
         }
         
@@ -64,6 +71,7 @@ class AtriusModel: ObservableObject {
         let defaults = UserDefaults.standard
         deleteStoredToken()
         defaults.removeObject(forKey: "userId")
+        defaults.removeObject(forKey: "userRole")
         self.isLoggedIn = false
         
         

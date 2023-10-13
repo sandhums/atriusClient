@@ -21,6 +21,13 @@ struct LoginView: View {
        
             if authResponse.status == "success"{
                 appState.routes.append(.home)
+//                if (model.userRole == "doctor"){
+//                    appState.routes.append(.home)
+//                } else if (model.userRole == "patient") {
+//                    appState.routes.append(.patient)
+//                } else {
+//                    appState.routes.append(.billing)
+//                }
             } else {
                 appState.errorWrapper = ErrorWrapper(error: AppError.login, guidance: authResponse.message ?? "")
             }

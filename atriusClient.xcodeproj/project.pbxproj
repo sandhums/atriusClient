@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06D4FE492AD6A6A4007FB815 /* PatientScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE482AD6A6A4007FB815 /* PatientScreen.swift */; };
+		06D4FE4B2AD6A6D6007FB815 /* DoctorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE4A2AD6A6D6007FB815 /* DoctorScreen.swift */; };
+		06D4FE4D2AD6A712007FB815 /* BillingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE4C2AD6A712007FB815 /* BillingScreen.swift */; };
+		06D4FE4F2AD827D5007FB815 /* EntryField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE4E2AD827D5007FB815 /* EntryField.swift */; };
+		06D4FE512AD828A6007FB815 /* AuthEntryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */; };
 		06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */; };
 		06DEEFE32AD2D4240039E5A4 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */; };
 		06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DEEFE42AD2D4440039E5A4 /* AppState.swift */; };
@@ -46,6 +51,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D4FE482AD6A6A4007FB815 /* PatientScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientScreen.swift; sourceTree = "<group>"; };
+		06D4FE4A2AD6A6D6007FB815 /* DoctorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorScreen.swift; sourceTree = "<group>"; };
+		06D4FE4C2AD6A712007FB815 /* BillingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingScreen.swift; sourceTree = "<group>"; };
+		06D4FE4E2AD827D5007FB815 /* EntryField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryField.swift; sourceTree = "<group>"; };
+		06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntryModel.swift; sourceTree = "<group>"; };
 		06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		06DEEFE22AD2D4240039E5A4 /* ErrorWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		06DEEFE42AD2D4440039E5A4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				06DEEFE02AD2D3F20039E5A4 /* ErrorView.swift */,
+				06D4FE4E2AD827D5007FB815 /* EntryField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 				06E117202AD1893D00077B50 /* AtriusModel.swift */,
 				06E117282AD18F5F00077B50 /* User.swift */,
 				06E117302AD2951500077B50 /* KeychainServices.swift */,
+				06D4FE502AD828A6007FB815 /* AuthEntryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +221,9 @@
 			children = (
 				06E117262AD18AE500077B50 /* SignupView.swift */,
 				06E1172A2AD1994B00077B50 /* LoginView.swift */,
+				06D4FE482AD6A6A4007FB815 /* PatientScreen.swift */,
+				06D4FE4A2AD6A6D6007FB815 /* DoctorScreen.swift */,
+				06D4FE4C2AD6A712007FB815 /* BillingScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -350,11 +365,16 @@
 				06E1172B2AD1994B00077B50 /* LoginView.swift in Sources */,
 				06E116EF2AD17DDD00077B50 /* atriusClientApp.swift in Sources */,
 				06E117292AD18F5F00077B50 /* User.swift in Sources */,
+				06D4FE4F2AD827D5007FB815 /* EntryField.swift in Sources */,
 				06DEEFE12AD2D3F20039E5A4 /* ErrorView.swift in Sources */,
+				06D4FE4B2AD6A6D6007FB815 /* DoctorScreen.swift in Sources */,
+				06D4FE512AD828A6007FB815 /* AuthEntryModel.swift in Sources */,
+				06D4FE4D2AD6A712007FB815 /* BillingScreen.swift in Sources */,
 				06DEEFE72AD3C7130039E5A4 /* String+extensions.swift in Sources */,
 				06E1171B2AD1875700077B50 /* HTTPClient.swift in Sources */,
 				06E117312AD2951500077B50 /* KeychainServices.swift in Sources */,
 				06DEEFE52AD2D4440039E5A4 /* AppState.swift in Sources */,
+				06D4FE492AD6A6A4007FB815 /* PatientScreen.swift in Sources */,
 				06E1171E2AD1880100077B50 /* APIEndpoints.swift in Sources */,
 				06E117212AD1893D00077B50 /* AtriusModel.swift in Sources */,
 			);

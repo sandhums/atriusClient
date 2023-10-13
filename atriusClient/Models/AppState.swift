@@ -18,9 +18,9 @@ enum Route: Hashable {
     case login
     case signup
     case home
-//    case profile
-//    case test
-//    case address
+    case patient
+    case doctor
+    case billing
     
 }
 

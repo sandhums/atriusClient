@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 enum NetworkError: Error {
     case badRequest
     case serverError(String)
@@ -69,7 +70,7 @@ struct HTTPClient {
             var headers = ["Content-Type": "application/json"]
         //TODO: BEARER
 //            let model = AtriusModel()
-//            
+//            let token = keychainToken
 //        guard let token = model.getStoredToken() else {
 //                return headers
 //            }

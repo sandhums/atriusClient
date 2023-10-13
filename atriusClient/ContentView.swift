@@ -11,6 +11,15 @@ struct ContentView: View {
     @EnvironmentObject private var model: AtriusModel
     @EnvironmentObject private var appState: AppState
     
+//    private func redirect() {
+//        if (model.userRole == "doctor") {
+//            appState.routes.append(.doctor)
+//        } else  if (model.userRole == "patient") {
+//            appState.routes.append(.patient)
+//        } else {
+//        appState.routes.append(.home)
+//            }
+//        }
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,6 +28,9 @@ struct ContentView: View {
             Text("Hello, world!")
             
         }
+//        .onAppear(perform: {
+//            redirect()
+//        })
         .navigationTitle("Home")
         .navigationBarBackButtonHidden(true)
         .toolbar {
@@ -37,5 +49,7 @@ struct ContentView: View {
 #Preview {
     NavigationStack {
         ContentView()
+            .environmentObject(AtriusModel())
+            .environmentObject(AppState())
     }
 }

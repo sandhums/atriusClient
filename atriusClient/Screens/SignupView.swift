@@ -10,15 +10,16 @@ import SwiftUI
 struct SignupView: View {
     @EnvironmentObject private var model: AtriusModel
     @EnvironmentObject private var appState: AppState
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var passwordConfirm: String = ""
+    @StateObject private var viewModel = AuthEntryModel()
+//    @State private var name: String = ""
+//    @State private var email: String = ""
+//    @State private var password: String = ""
+//    @State private var passwordConfirm: String = ""
     @State private var errorMessage: String = ""
     
     private func signup() async {
         do {
-            let authResponse = try await model.signup(name: name, email: email, password: password, passwordConfirm: passwordConfirm)
+            let authResponse = try await model.signup(name: viewModel.name, email: viewModel.email, password: viewModel.password, passwordConfirm: viewModel.confirmPw)
             if authResponse.status == "success"{
                 appState.routes.append(.home)
             } else {
@@ -32,12 +33,10 @@ struct SignupView: View {
     }
     var body: some View {
         Form {
-            TextField("name", text: $name)
-            TextField("Email", text: $email)
-                .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
-            SecureField("Confirm Password", text: $passwordConfirm)
-
+            EntryField(sfSymbolName: "envelope", placeholder: "Full Name", prompt: viewModel.namePrompt, field: $viewModel.name)
+            EntryField(sfSymbolName: "envelope", placeholder: "Email Address", prompt: viewModel.emailPrompt, field: $viewModel.email)
+            EntryField(sfSymbolName: "lock", placeholder: "Password", prompt: viewModel.passwordPrompt, field: $viewModel.password, isSecure: true)
+            EntryField(sfSymbolName: "lock", placeholder: "Confirm Password", prompt: viewModel.confirmPwPrompt, field: $viewModel.confirmPw, isSecure: true)
             Button("Signup"){
                 Task {
                     await signup()
